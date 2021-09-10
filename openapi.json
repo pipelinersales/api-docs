@@ -57,7 +57,7 @@
             }
           },
           "404": {
-            "description": "Sent when invalid ID is given",
+            "description": "This error code is sent when invalid ID is given",
             "content": {
               "application / json": {
                 "schema": {
