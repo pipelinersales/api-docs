@@ -18,7 +18,7 @@
   "paths": {
     "/entities/Accounts/{id}": {
       "get": {
-        "description": "Rado Returns account with given id  - this is a test",
+        "description": "Returns account with given id",
         "operationId": "Accounts.get",
         "tags": [
           "Account"
@@ -57,7 +57,7 @@
             }
           },
           "404": {
-            "description": "This error code is sent when invalid ID is given",
+            "description": "Sent when invalid ID is given",
             "content": {
               "application / json": {
                 "schema": {
@@ -234,7 +234,7 @@
     },
     "/entities/Accounts": {
       "get": {
-        "description": "Returns all defined Accounts. Test",
+        "description": "Returns all defined Accounts",
         "operationId": "Accounts.list",
         "tags": [
           "Account"
