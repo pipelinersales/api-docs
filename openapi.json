@@ -2,7 +2,24 @@
   "openapi": "3.0.2",
   "servers": [
     {
-      "url": "https://us-east.pipelinersales.com/api/v100/rest/spaces/nv3_PipelinerDev"
+      "url": "https://us-east.pipelinersales.com/api/{port}/rest/spaces/{username}",
+      "description": "The production API server",
+      "variables": {
+        "username": {
+         
+          "description": "this value is assigned by the service provider, in this example `gigantic-server.com`"
+        },
+        "port": {
+          "enum": [
+            "8443",
+            "443"
+          ],
+          "default": "8443"
+        },
+        "basePath": {
+          "default": "v2"
+        }
+      }
     },
     {
       "url": "https://eu-central.pipelinersales.com/api/v100/rest/spaces/nv3_PipelinerDev"
