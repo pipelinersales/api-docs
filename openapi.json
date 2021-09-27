@@ -18,7 +18,7 @@
   "paths": {
     "/entities/Accounts/{id}": {
       "get": {
-        "description": "Returns account with given id",
+        "description": "Rado Returns account with given id  - this is a test",
         "operationId": "Accounts.get",
         "tags": [
           "Account"
@@ -27,7 +27,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Account Created by Amit ID of account to retrieve.",
+            "description": "ID of account to retrieve",
             "required": true,
             "schema": {
               "type": "string",
@@ -57,7 +57,7 @@
             }
           },
           "404": {
-            "description": "Sent when invalid ID is given",
+            "description": "This error code is sent when invalid ID is given",
             "content": {
               "application / json": {
                 "schema": {
@@ -76,10 +76,11 @@
               }
             }
           }
-        }
+        },
+        "summary": "Next Operation"
       },
       "delete": {
-        "description": "Removes account with given id.",
+        "description": "Removes account with given id",
         "operationId": "Accounts.delete",
         "tags": [
           "Account"
@@ -88,7 +89,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of account to delete.",
+            "description": "ID of account to delete",
             "required": true,
             "schema": {
               "type": "string",
@@ -107,7 +108,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Removal confirmation.",
+            "description": "Removal confirmation",
             "content": {
               "application/json": {
                 "schema": {
@@ -402,7 +403,8 @@
               }
             }
           }
-        }
+        },
+        "summary": "Accounts Operation Name"
       },
       "post": {
         "description": "Creates new account",
@@ -118928,5 +118930,3 @@
     }
   }
 }
->>>>>>> Stashed changes
->>>>>>> Stashed changes
