@@ -6,7 +6,7 @@
       "description": "The production API server",
       "variables": {
         "username": {
-          "default":"demo",
+          "default": "demo",
           "description": "this value is assigned by the service provider, in this example `gigantic-server.com`"
         },
         "port": {
@@ -24,7 +24,8 @@
   ],
   "info": {
     "title": "Pipeliner Cloud API",
-    "version": "100"
+    "version": "100",
+    "description": "Test\n133\n*Rich text*\n***dates*\n\n[www.example.com]"
   },
   "paths": {
     "/entities/Accounts/{id}": {
@@ -247,7 +248,7 @@
     },
     "/entities/Accounts": {
       "get": {
-        "description": "Returns all defined Accounts",
+        "description": "Returns all defined Accounts ",
         "operationId": "Accounts.list",
         "tags": [
           "Account"
@@ -257,7 +258,6 @@
             "name": "include-deleted",
             "in": "query",
             "description": "if enabled, deleted Accounts are returned as well",
-            "required": false,
             "schema": {
               "type": "boolean"
             }
@@ -478,7 +478,8 @@
             }
           }
         }
-      }
+      },
+      "parameters": []
     },
     "/entities/Accounts/batch-delete": {
       "post": {
@@ -16864,9 +16865,6 @@
       "get": {
         "description": "Returns cloudobject with given id",
         "operationId": "CloudObjects.get",
-        "tags": [
-          "Cloud"
-        ],
         "parameters": [
           {
             "name": "id",
@@ -16920,7 +16918,10 @@
               }
             }
           }
-        }
+        },
+        "tags": [
+          "Cloud"
+        ]
       },
       "delete": {
         "description": "Removes cloudobject with given id",
@@ -43530,7 +43531,8 @@
               }
             }
           }
-        }
+        },
+        "summary": ""
       }
     },
     "/entities/LeadOppties": {
@@ -81411,6 +81413,7 @@
         ]
       },
       "createAccountInput": {
+        "type": "object",
         "properties": {
           "modified": {
             "type": "string",
@@ -81427,13 +81430,13 @@
           },
           "picture": {
             "type": "object",
+            "description": "Relation to CloudObject, see: 'createCloudObjectInput' object for properties.",
             "properties": {
               "id": {
                 "type": "string",
                 "format": "uri"
               }
-            },
-            "description": "Relation to CloudObject, see: 'createCloudObjectInput' object for properties."
+            }
           },
           "account_class": {
             "type": "integer",
@@ -81603,55 +81606,58 @@
           },
           "social_media": {
             "type": "object",
+            "description": "Relation to AccountSocialRelation, see: 'createAccountSocialRelationInput' object for properties.",
             "properties": {
               "id": {
                 "type": "string",
                 "format": "uri"
               }
-            },
-            "description": "Relation to AccountSocialRelation, see: 'createAccountSocialRelationInput' object for properties."
+            }
           },
           "sharing_units": {
             "type": "array",
+            "description": "Relations to SalesUnits.",
             "items": {
               "type": "object",
+              "description": "Relation to AccountSharingSalesUnitRelation, see: 'createAccountSharingSalesUnitRelationInput' object for properties.",
               "properties": {
                 "id": {
                   "type": "string",
                   "format": "uri"
                 }
-              },
-              "description": "Relation to AccountSharingSalesUnitRelation, see: 'createAccountSharingSalesUnitRelationInput' object for properties."
-            },
-            "description": "Relations to SalesUnits."
+              }
+            }
           },
           "sharing_clients": {
             "type": "array",
+            "description": "Relations to Clients.",
             "items": {
               "type": "object",
+              "description": "Relation to AccountSharingClientRelation, see: 'createAccountSharingClientRelationInput' object for properties.",
               "properties": {
                 "id": {
                   "type": "string",
                   "format": "uri"
                 }
-              },
-              "description": "Relation to AccountSharingClientRelation, see: 'createAccountSharingClientRelationInput' object for properties."
-            },
-            "description": "Relations to Clients."
+              }
+            }
           },
           "documents": {
             "type": "array",
+            "description": "Relations to CloudObjects.",
             "items": {
               "type": "object",
+              "description": "Relation to CloudObjectRelation, see: 'createCloudObjectRelationInput' object for properties.",
               "properties": {
                 "id": {
                   "type": "string",
                   "format": "uri"
+                },
+                "": {
+                  "type": "string"
                 }
-              },
-              "description": "Relation to CloudObjectRelation, see: 'createCloudObjectRelationInput' object for properties."
-            },
-            "description": "Relations to CloudObjects."
+              }
+            }
           },
           "is_unsubscribed": {
             "type": "boolean",
@@ -118941,15 +118947,10 @@
       }
     },
     "securitySchemes": {
-      "Basic nv3_PipelinerDev_G6HJ3LHR1IJKOIGT:YjNQIAJzqR1PFHgL": {
+      "API Key - 1": {
         "type": "http",
         "scheme": "basic"
       }
     }
-  },
-  "security": [
-    {
-      "Basic nv3_PipelinerDev_G6HJ3LHR1IJKOIGT:YjNQIAJzqR1PFHgL": []
-    }
-  ]
+  }
 }
