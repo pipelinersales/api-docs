@@ -2,13 +2,13 @@
   "openapi": "3.0.2",
   "servers": [
     {
-      "url": "https://us-east.pipelinersales.com//api/v100/rest/spaces/<space_id>"
+      "url": "https://us-east.pipelinersales.com/api/v100/rest/spaces/nv3_PipelinerDev"
     },
     {
-      "url": "https://eu-central.pipelinersales.com//api/v100/rest/spaces/<space_id>"
+      "url": "https://eu-central.pipelinersales.com/api/v100/rest/spaces/nv3_PipelinerDev"
     },
     {
-      "url": "https://ca-central.pipelinersales.com//api/v100/rest/spaces/<space_id>"
+      "url": "https://ca-central.pipelinersales.com/api/v100/rest/spaces/nv3_PipelinerDev"
     }
   ],
   "info": {
@@ -21,7 +21,8 @@
         "description": "Rado Returns account with given id  - this is a test",
         "operationId": "Accounts.get",
         "tags": [
-          "Account"
+          "Account",
+          "Activity"
         ],
         "parameters": [
           {
@@ -118926,6 +118927,12 @@
             "format": "uuid"
           }
         }
+      }
+    },
+    "securitySchemes": {
+      "Basic nv3_PipelinerDev_G6HJ3LHR1IJKOIGT:YjNQIAJzqR1PFHgL": {
+        "type": "http",
+        "scheme": "basic"
       }
     }
   }
