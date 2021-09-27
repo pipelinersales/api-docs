@@ -234,7 +234,7 @@
     },
     "/entities/Accounts": {
       "get": {
-        "description": "Returns all defined Accounts",
+        "description": "Returns all defined Accounts. Test",
         "operationId": "Accounts.list",
         "tags": [
           "Account"
